@@ -12,7 +12,7 @@ function setDarkMode() {
     }
 }
 
-function DarkMode() {
+export default function DarkMode() {
     return (
         <div>
             <button className=" w-20 absolute flex top-3 right-20 shadow-lg shadow-slate-700 bg-[#619cb8] dark:bg-[#5272a3] dark:shadow-slate-500 border-2 rounded-full" onClick={setDarkMode}>
@@ -25,5 +25,3 @@ function DarkMode() {
         </div>
     )
 }
-
-export default DarkMode;

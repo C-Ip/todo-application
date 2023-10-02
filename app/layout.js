@@ -13,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='dark:bg-slate-600'>
+      <body>
         <Header />
         <DarkMode />
-        <Footer />
+        {/* <Footer /> */}
         <main>{children}</main>
       </body>
     </html>

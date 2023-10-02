@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .dark-mode {
+        color: #b1cddf;
+        background-color: #64748B;
+    }
+}
+
+@layer components {
+    .form-buttons {
+        width: 3.5rem;
+        margin: 1rem;
+        text-align: center;
+        border-radius: 9999px;
+       
+    
+    }
+}

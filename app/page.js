@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import TaskList from "./components/TaskList";
-import CreateTask from "./components/CreateTask";
+import TaskForm from "./components/TaskForm";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <TaskList />
 
       {/* Form UI to create a new task */}
-      <CreateTask />
+      <TaskForm />
     </section>
   );
 }

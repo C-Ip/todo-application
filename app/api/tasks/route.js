@@ -4,7 +4,7 @@ import Task from "../../model/Task";
 
 export async function GET(req) {
     await connectMongoDB();
-    return NextResponse.json(await Task.find({}));
+    return await Task.find({});
 }
 
 export async function POST(req) {

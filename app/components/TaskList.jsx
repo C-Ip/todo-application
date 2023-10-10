@@ -21,7 +21,7 @@ export default async function TaskList() {
                 <div className="relative max-w-sm m-2 bg-slate-100 rounded shadow-md text-center">
                     <h1 className="text-lg text-center">List Name</h1>
                     {/* ---------------- Task Flext Box --------------------- */}
-                    {tasksList.map(createTask)}
+                    { tasksList.map(createTask) }
                     {/* ---------------------------------------------------------- */}
                 </div>
             <NewTask />

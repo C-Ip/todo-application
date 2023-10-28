@@ -8,16 +8,18 @@ export async function GET(req) {
 }
 
 export async function POST(req) {
-    const {description, completed} = await req;
+    console.log(req);
+    const { listName, description, completed } = await req;
     await connectMongoDB();
     
-    await Task.create({description, completed});
+    await Task.create({listName, description, completed});
     return NextResponse.json({message: "Task Created"}, {status: 201});
 }
 
 export async function DELETE(req) {
+    const { id } = await req;
     await connectMongoDB();
-    await Task.deleteOne();
+    await Task.deleteOne({_id: id});
 
     return NextResponse.json({message: "Task has been deleted."}, {status: 201});
 }

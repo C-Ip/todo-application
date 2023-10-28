@@ -3,6 +3,7 @@
 import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema ({
+    listName: String,
     description: String,
     completed: Boolean
 });

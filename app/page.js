@@ -1,15 +1,12 @@
-import { redirect } from "next/navigation";
 import TaskList from "./components/TaskList";
-import Form from "./components/Form";
-import TaskForm from "./components/TaskForm";
+import TaskFormActions from "./components/TaskFormActions";
+import CreateListButton from "./components/CreateListButton";
 
 export default function Home() {
   return (
-    <section className="">
+    <section>
       <TaskList />
-
-      {/* Form UI to create a new task */}
-      <TaskForm />
+      <TaskFormActions />
     </section>
   );
 }

@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from "react";
+
 var darkMode = false;
 
 function setDarkMode() {
@@ -13,6 +15,27 @@ function setDarkMode() {
 }
 
 export default function DarkMode() {
+
+    var darkMode = false;
+
+    // const [darkMode, setDarkMode] = useState(false);
+
+    // function handleDarkMode() {
+    //     setDarkMode(() => {
+    //         return !darkMode;
+    //     })
+    // }
+
+    function setDarkMode() {
+        if (darkMode) {
+            darkMode = false;
+            document.documentElement.classList.remove("dark");
+        } else {
+            darkMode = true;
+            document.documentElement.classList.add("dark");
+        }
+    }
+
     return (
         <div>
             <button className=" w-20 absolute flex top-3 right-20 shadow-lg shadow-slate-700 bg-[#619cb8] dark:bg-[#5272a3] dark:shadow-slate-500 border-2 rounded-full" onClick={setDarkMode}>

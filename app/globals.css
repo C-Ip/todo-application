@@ -5,7 +5,12 @@
 @layer base {
     .dark-mode {
         color: #b1cddf;
-        background-color: #64748B;
+        background-color: #8491a4;
+    }
+
+    .dark-mode-form {
+        color: #b1cddf;
+        background-color: #8297b5;
     }
 }
 
@@ -15,7 +20,36 @@
         margin: 1rem;
         text-align: center;
         border-radius: 9999px;
-       
-    
+    }
+
+    .new-task-btn {
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #000000;
+        font-size: 15px;
+        background: #ffffff;
+        padding: 10px 20px 10px 20px;
+        border: solid #b5b5b5 2px;
+        text-decoration: none;
+    }
+
+    .disabled-task-btn {
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #000000;
+        font-size: 15px;
+        background: #e0e0e0;
+        padding: 10px 20px 10px 20px;
+        border: solid #b5b5b5 2px;
+        text-decoration: none;
+    }
+
+    .new-task-btn-hover {
+        background: #d6e8ff;
+        text-decoration: none;
     }
 }

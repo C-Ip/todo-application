@@ -1,14 +1,13 @@
 import { GET } from "../api/tasks/route";
 import Task from "./Task";
-import NewTask from "./NewTask";
-import CreateListButton from "./CreateListButton";
-import List from "./List";
+import CreateListButton from "./ToDoList/CreateListButton";
 
 
 
 export default async function TaskList() {
 
     function createTask(task) {
+
         return (
             <div>
                 <h1 className="text-lg text-center">{task.listName}</h1>
@@ -20,38 +19,29 @@ export default async function TaskList() {
             </div>
         )
     }
-    
-    const tasksList = await GET();
 
-    // return (
-    //     <section>
-    //         <div className="relative my-4 ml-4 max-w-sm dark:dark-mode">
-    //             <div className="relative max-w-sm mb-4 bg-slate-100 rounded shadow-md text-center">
-    //                 <h1 className="text-lg text-center">List Name</h1>
-    //                 {/* ---------------- Task Flext Box --------------------- */}
-    //                 { tasksList.map(createTask) }
-    //                 {/* ---------------------------------------------------------- */}
-    //             </div>
-    //         <NewTask/>
-    //         </div>
-    //     </section>
-    // ) 
+    const taskList = await GET();
 
-    if(tasksList.length > 0) {
+    if(taskList.length > 0) {
         return (
             <section>
                 <div className="relative my-4 ml-4 max-w-sm dark:dark-mode">
                     <div className="relative max-w-sm mb-4 bg-slate-100 rounded shadow-md text-center">
-                        <h1 className="text-lg text-center"></h1>
+                        <h1 className="heading"></h1>
                         {/* ---------------- Task Flext Box --------------------- */}
-                        { tasksList.map(createTask) }
+                        { taskList.map(createTask) }
                         {/* ---------------------------------------------------------- */}
                     </div>
-                <NewTask/>
+                <CreateListButton key="create-list-button" toCreateList={false}/>
                 </div>
             </section>
-        ) 
+        ); 
     } else {
-        return (<CreateListButton />);
+        return (
+            <section>
+                <h1 className="heading mb-4">No list has been created.</h1>
+                <CreateListButton key="create-list-button" toCreateList={true}/>
+        </section>
+        );
     }
 }

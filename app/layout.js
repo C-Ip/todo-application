@@ -16,8 +16,8 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <DarkMode />
-        {/* <Footer /> */}
         <main>{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   )

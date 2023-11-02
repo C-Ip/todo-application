@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { remove } from "./TaskFormActions";
+import { remove } from "./Form/FormActions";
 import deleteIcon from "../../public/recycle-bin.png";
 
 export default function Task(props) {
